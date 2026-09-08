@@ -106,7 +106,7 @@ export function Skills() {
           </div>
           <h3 className="font-mono font-bold tracking-wide">SKILLS</h3>
         </div>
-        <p className="text-sm text-muted-foreground mb-6">
+        <p className="text-sm text-muted-foreground mb-3">
           Tools and technologies I reach for, day to day.
         </p>
 
