@@ -2,11 +2,12 @@ import { HeroCTAs } from "./hero-ctas";
 
 export function Hero() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 py-20 max-w-7xl mx-auto">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 max-w-7xl mx-auto">
       <div>
+        <p className="font-mono font-bold text-lg mb-2">Jaime González</p>
         <p className="text-sm font-mono text-muted-foreground mb-4">
           Full-Stack Developer with 5+ years of experience - React, Next.js,
-          NestJs.
+          NestJS.
         </p>
         <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6">
           Building software that ships, works, and doesn&apos;t fall apart in
