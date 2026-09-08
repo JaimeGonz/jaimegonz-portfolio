@@ -1,24 +1,104 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code2 } from "lucide-react";
+import { RefreshCw, Blocks, Webhook, Code2 } from "lucide-react";
+import {
+  TypescriptOriginal,
+  JavascriptOriginal,
+  VuejsOriginal,
+  ReactOriginal,
+  NextjsOriginal,
+  NestjsOriginal,
+  NodejsOriginal,
+  ExpressOriginal,
+  MysqlOriginal,
+  PostgresqlOriginal,
+  PrismaOriginal,
+  FirebaseOriginal,
+  TailwindcssOriginal,
+  AmazonwebservicesOriginalWordmark,
+  DockerOriginal,
+  RailwayOriginal,
+  SupabaseOriginal,
+  GitOriginal,
+} from "devicons-react";
 
-const skillCategories = [
-  { label: "Languages", skills: ["TypeScript", "JavaScript"] },
-  { label: "Frameworks", skills: ["Vue", "React", "Next.js", "NestJS"] },
-  { label: "State & Data", skills: ["Zustand", "TanStack Query", "REST APIs"] },
-  { label: "Backend", skills: ["Node.js", "Express"] },
-  { label: "Databases", skills: ["MySQL", "PostgreSQL", "Prisma", "Firebase"] },
-  { label: "UI & Styling", skills: ["Tailwind", "shadcn/ui"] },
+interface Skill {
+  name: string;
+  icon: React.ReactNode;
+}
+
+interface SkillCategory {
+  label: string;
+  skills: Skill[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    label: "Languages",
+    skills: [
+      { name: "TypeScript", icon: <TypescriptOriginal size={16} /> },
+      { name: "JavaScript", icon: <JavascriptOriginal size={16} /> },
+    ],
+  },
+  {
+    label: "Frameworks",
+    skills: [
+      { name: "React", icon: <ReactOriginal size={16} /> },
+      { name: "Next.js", icon: <NextjsOriginal size={16} /> },
+      { name: "NestJS", icon: <NestjsOriginal size={16} /> },
+      { name: "Vue", icon: <VuejsOriginal size={16} /> },
+    ],
+  },
+  {
+    label: "State & Data",
+    skills: [
+      { name: "Zustand", icon: <Code2 size={16} /> }, // confirmar si Devicon lo tiene, si no, este fallback aplica
+      { name: "TanStack Query", icon: <RefreshCw size={16} /> },
+      { name: "REST APIs", icon: <Webhook size={16} /> },
+    ],
+  },
+  {
+    label: "Backend",
+    skills: [
+      { name: "Node.js", icon: <NodejsOriginal size={16} /> },
+      { name: "Express", icon: <ExpressOriginal size={16} /> },
+    ],
+  },
+  {
+    label: "Databases",
+    skills: [
+      { name: "MySQL", icon: <MysqlOriginal size={16} /> },
+      { name: "PostgreSQL", icon: <PostgresqlOriginal size={16} /> },
+      { name: "Prisma", icon: <PrismaOriginal size={16} /> },
+      { name: "Firebase", icon: <FirebaseOriginal size={16} /> },
+    ],
+  },
+  {
+    label: "UI & Styling",
+    skills: [
+      { name: "Tailwind", icon: <TailwindcssOriginal size={16} /> },
+      { name: "shadcn/ui", icon: <Blocks size={16} /> },
+    ],
+  },
   {
     label: "Cloud & DevOps",
-    skills: ["AWS", "Docker", "Railway", "Vercel", "Supabase"],
+    skills: [
+      { name: "AWS", icon: <AmazonwebservicesOriginalWordmark size={16} /> },
+      { name: "Docker", icon: <DockerOriginal size={16} /> },
+      { name: "Railway", icon: <RailwayOriginal size={16} /> },
+      { name: "Vercel", icon: <Code2 size={16} /> }, // confirmar si Devicon lo tiene
+      { name: "Supabase", icon: <SupabaseOriginal size={16} /> },
+    ],
   },
-  { label: "Tools", skills: ["Git"] },
+  {
+    label: "Tools",
+    skills: [{ name: "Git", icon: <GitOriginal size={16} /> }],
+  },
 ];
 
 export function Skills() {
   return (
-    <section className="px-6 max-w-7xl mx-auto">
+    <section className="px-6 max-w-7xl mx-auto pb-6">
       <Card className="p-6 md:p-8 bg-card border-border">
         <div className="flex items-center gap-2 mb-1">
           <div className="flex h-7 w-7 items-center justify-center rounded-md bg-muted">
@@ -30,20 +110,21 @@ export function Skills() {
           Tools and technologies I reach for, day to day.
         </p>
 
-        <div className="space-y-5">
+        <div className="columns-1 md:columns-2 gap-x-12">
           {skillCategories.map((category) => (
-            <div key={category.label}>
+            <div key={category.label} className="break-inside-avoid mb-5">
               <p className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-2">
                 {category.label}
               </p>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <Badge
-                    key={skill}
+                    key={skill.name}
                     variant="outline"
-                    className="rounded-full px-3 py-1 text-sm font-normal bg-secondary/40"
+                    className="rounded-full px-3 py-1 text-sm font-normal bg-secondary/40 gap-1.5"
                   >
-                    {skill}
+                    {skill.icon}
+                    {skill.name}
                   </Badge>
                 ))}
               </div>
