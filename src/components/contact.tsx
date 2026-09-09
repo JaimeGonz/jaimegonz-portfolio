@@ -38,7 +38,7 @@ export function Contact() {
           rel="noopener noreferrer"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-border hover:bg-muted transition-colors"
         >
-          <GithubOriginal size={20} />
+          <GithubOriginal size={20} className="dark:invert" />
         </a>
       </div>
     </section>

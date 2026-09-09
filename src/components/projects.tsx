@@ -92,7 +92,7 @@ export function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GithubOriginal size={16} />
+                  <GithubOriginal size={16} className="dark:invert" />
                   Code
                 </a>
               </Button>
