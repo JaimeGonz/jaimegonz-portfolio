@@ -88,7 +88,7 @@ export function Header() {
               href={`#${item.id}`}
               className={`text-sm transition-colors ${
                 activeId === item.id
-                  ? "text-foreground underline underline-offset-4"
+                  ? "text-primary underline underline-offset-4"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
