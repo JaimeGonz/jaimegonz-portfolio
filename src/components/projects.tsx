@@ -43,7 +43,7 @@ const projects: Project[] = [
 
 export function Projects() {
   return (
-    <section className="px-6 max-w-7xl mx-auto">
+    <section id="projects" className="px-6 max-w-7xl mx-auto">
       <div className="flex items-center gap-2 mb-1">
         <div className="flex h-7 w-7 items-center justify-center rounded-md bg-muted">
           <Folder className="h-4 w-4" />
@@ -58,7 +58,7 @@ export function Projects() {
         {projects.map((project) => (
           <Card
             key={project.name}
-            className="p-4 md:p-4 bg-card border-border flex flex-col"
+            className="p-4 bg-card border-border flex flex-col"
           >
             <div className="flex items-center justify-between mb-1">
               <h4 className="text-lg font-bold">{project.name}</h4>
