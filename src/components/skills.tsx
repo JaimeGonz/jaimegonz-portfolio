@@ -98,18 +98,17 @@ const skillCategories: SkillCategory[] = [
 
 export function Skills() {
   return (
-    <section className="px-6 max-w-7xl mx-auto pb-6">
-      <Card className="p-6 md:p-8 bg-card border-border">
-        <div className="flex items-center gap-2 mb-1">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-muted">
-            <Code2 className="h-4 w-4" />
-          </div>
-          <h3 className="font-mono font-bold tracking-wide">SKILLS</h3>
+    <section id="skills" className="px-6 max-w-7xl mx-auto">
+      <div className="flex items-center gap-2 mb-1">
+        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-muted">
+          <Code2 className="h-4 w-4" />
         </div>
-        <p className="text-sm text-muted-foreground mb-3">
-          Tools and technologies I reach for, day to day.
-        </p>
-
+        <h3 className="font-mono font-bold tracking-wide">SKILLS</h3>
+      </div>
+      <p className="text-sm text-muted-foreground mb-4">
+        Tools and technologies I reach for, day to day.
+      </p>
+      <Card className="p-6 bg-card border-border">
         <div className="columns-1 md:columns-2 gap-x-12">
           {skillCategories.map((category) => (
             <div key={category.label} className="break-inside-avoid mb-5">
