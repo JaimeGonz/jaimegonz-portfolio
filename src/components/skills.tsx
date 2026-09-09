@@ -20,6 +20,8 @@ import {
   RailwayOriginal,
   SupabaseOriginal,
   GitOriginal,
+  ZustandOriginal,
+  VercelOriginal,
 } from "devicons-react";
 
 interface Skill {
@@ -52,7 +54,7 @@ const skillCategories: SkillCategory[] = [
   {
     label: "State & Data",
     skills: [
-      { name: "Zustand", icon: <Code2 size={16} /> }, // confirmar si Devicon lo tiene, si no, este fallback aplica
+      { name: "Zustand", icon: <ZustandOriginal size={16} /> },
       { name: "TanStack Query", icon: <RefreshCw size={16} /> },
       { name: "REST APIs", icon: <Webhook size={16} /> },
     ],
@@ -61,7 +63,10 @@ const skillCategories: SkillCategory[] = [
     label: "Backend",
     skills: [
       { name: "Node.js", icon: <NodejsOriginal size={16} /> },
-      { name: "Express", icon: <ExpressOriginal size={16} /> },
+      {
+        name: "Express",
+        icon: <ExpressOriginal size={16} className="dark:invert" />,
+      },
     ],
   },
   {
@@ -85,14 +90,22 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "AWS", icon: <AmazonwebservicesOriginalWordmark size={16} /> },
       { name: "Docker", icon: <DockerOriginal size={16} /> },
-      { name: "Railway", icon: <RailwayOriginal size={16} /> },
-      { name: "Vercel", icon: <Code2 size={16} /> }, // confirmar si Devicon lo tiene
+      {
+        name: "Railway",
+        icon: <RailwayOriginal size={16} className="invert dark:invert-0" />,
+      },
+      {
+        name: "Vercel",
+        icon: <VercelOriginal size={16} className="dark:invert" />,
+      },
       { name: "Supabase", icon: <SupabaseOriginal size={16} /> },
     ],
   },
   {
     label: "Tools",
-    skills: [{ name: "Git", icon: <GitOriginal size={16} /> }],
+    skills: [
+      { name: "Git", icon: <GitOriginal size={16} className="dark:invert" /> },
+    ],
   },
 ];
 
