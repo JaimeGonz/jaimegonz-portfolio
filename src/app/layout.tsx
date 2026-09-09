@@ -14,9 +14,18 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Jaime González — Full-Stack Develope",
+  metadataBase: new URL("https://jaimegonzalez.dev"),
+  title: "Jaime González — Full-Stack Developer",
   description:
     "Full-stack developer building complete applications, from database to production.",
+  openGraph: {
+    title: "Jaime González — Full-Stack Developer",
+    description:
+      "Live projects: Carga+ (NestJS + PostgreSQL + Prisma) and a Notifications API with the Strategy pattern.",
+    url: "https://jaimegonzalez.dev",
+    siteName: "Jaime González",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
