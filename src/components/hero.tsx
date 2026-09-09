@@ -1,18 +1,21 @@
+import { ChevronDown } from "lucide-react";
 import { HeroCTAs } from "./hero-ctas";
 
 export function Hero() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 max-w-7xl mx-auto">
+    <section
+      id="home"
+      className="relative min-h-[90vh] grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 max-w-7xl mx-auto"
+    >
       <div>
-        <p className="font-mono font-bold text-lg mb-2">Jaime González</p>
-        <p className="text-sm font-mono text-muted-foreground mb-4">
-          Full-Stack Developer with 5+ years of experience - React, Next.js,
-          NestJS.
+        <p className="text-xs font-mono text-muted-foreground mt-5 mb-0">
+          Full-Stack Developer with 5+ years of experience.
         </p>
         <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6">
           Building software that ships, works, and doesn&apos;t fall apart in
           production.
         </h1>
+
         <HeroCTAs />
       </div>
 
@@ -32,6 +35,15 @@ export function Hero() {
 };`}
         </pre>
       </div>
+
+      <a
+        href="#projects"
+        aria-label="Scroll to projects"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-xs font-mono text-muted-foreground animate-bounce motion-reduce:animate-none"
+      >
+        SCROLL
+        <ChevronDown className="h-4 w-4" />
+      </a>
     </section>
   );
 }
