@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 max-w-7xl mx-auto"
+      className="relative min-h-[90dvh] grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 max-w-7xl mx-auto"
     >
       <div>
         <p className="text-xs font-mono text-muted-foreground mt-5 mb-0">
@@ -39,7 +39,7 @@ export function Hero() {
       <a
         href="#projects"
         aria-label="Scroll to projects"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-xs font-mono text-muted-foreground animate-bounce motion-reduce:animate-none"
+        className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-1 text-xs font-mono text-muted-foreground animate-bounce motion-reduce:animate-none"
       >
         SCROLL
         <ChevronDown className="h-4 w-4" />

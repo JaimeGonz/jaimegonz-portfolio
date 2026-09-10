@@ -5,7 +5,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-[75vh] flex flex-col items-center justify-center px-6 max-w-7xl mx-auto py-20 text-center"
+      className="min-h-[75dvh] flex flex-col items-center justify-center px-6 max-w-7xl mx-auto py-20 text-center"
     >
       <p className="text-xs font-mono font-semibold tracking-widest text-muted-foreground uppercase mb-4">
         Get in touch
